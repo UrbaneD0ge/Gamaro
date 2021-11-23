@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willgresham34/Gamaro.git"
+  },
+  "keywords": [
+    "Server"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willgresham34/Gamaro/issues"
+  },
+  "homepage": "https://github.com/willgresham34/Gamaro#readme",
+  "dependencies": {
+    "apollo-server-express": "^3.5.0",
+    "bcrypt": "^5.0.1",
+    "mongoose": "^6.0.13",
+    "morgan": "^1.10.0",
+    "stripe": "^8.191.0"
+  }
+}
