@@ -9,7 +9,13 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <link rel="stylesheet" href="../src/index.css">
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -28,7 +34,31 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper black">
+          <a href="#!" class="brand-logo logo center">GAMARO</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="search row">
+
+      <div class="col s3 grey lighten-2">
+        <h2 class="center">Search</h2>
+        <!-- Grey navigation panel -->
+      </div>
+
+      <div class="col s9 whitesmoke logo">
+<h1 class="center">GAMARO</h1>
+        <div id="root"></div>
+
+      </div>
+
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +69,7 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>
