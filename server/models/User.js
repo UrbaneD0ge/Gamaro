@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 const bcrypt = require("bcrypt");
 const Inventory = require("./Inventory");
-const Orders = require("./Order");
+const Order = require("./Order");
 
 const userSchema = new Schema({
   firstName: {
@@ -33,7 +33,7 @@ const userSchema = new Schema({
     minlength: [8, "Password too short!"],
   },
   inventory: [Inventory.schema],
-  orders: [Orders.schema],
+  orders: [Order.schema],
 });
 
 userSchema.pre("save", async function (next) {

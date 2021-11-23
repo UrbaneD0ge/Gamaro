@@ -19,6 +19,11 @@ const productSchema = new Schema({
     required: true,
     min: [1.0, "Capitalism demands you add a price!"],
   },
+  quantity: {
+    type: Number,
+    min: 1,
+    default: 1,
+  },
   category: {
     type: Schema.Types.ObjectId,
     ref: "Category",
