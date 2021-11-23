@@ -12,8 +12,8 @@ code {
     monospace;
 }
 
-.col {
-  height: 100vh !important
+main {
+  height: 100% !important
 }
 
 .logo {
@@ -21,3 +21,11 @@ code {
   letter-spacing: .14em;
   font-size: 4rem;
 }
+
+button {
+  width: 20vh !important;
+  height: 20vh !important;
+  bottom: 8vh;
+}
+
+.material-icons.md-24 { font-size: 48px; }

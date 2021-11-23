@@ -16,6 +16,8 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -45,19 +47,33 @@
         </div>
       </nav>
     </div>
+    <!-- Grey navigation panel -->
     <div class="search row">
 
       <div class="col s3 grey lighten-2">
         <h2 class="center">Search</h2>
-        <!-- Grey navigation panel -->
       </div>
 
-      <div class="col s9 whitesmoke logo">
-<h1 class="center">GAMARO</h1>
+      <!-- Main content area -->
+<div class="col s9 whitesmoke">
+  <main class="container center">
+  <h1 class="center">
+<!-- FAB -->
+    <button class="btn fixed-action-btn btn-floating yellow modal-trigger" data-target="modal1"><span class="play material-icons">play_arrow</span></button></h1>
+<!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
         <div id="root"></div>
 
       </div>
-
+</main>
     </div>
     <!--
       This HTML file is a template.
@@ -71,5 +87,6 @@
     -->
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="../src/index.js"></script>
   </body>
 </html>
