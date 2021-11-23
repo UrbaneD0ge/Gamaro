@@ -55,7 +55,7 @@ const resolvers = {
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
       const order = new Order({ products: args.products });
-      const line_items = [];
+      const cart_items = [];
 
       const { products } = await order.populate("products").execPopulate();
 
@@ -65,27 +65,23 @@ const resolvers = {
           description: products[i].description,
           images: [`${url}/images/${products[i].image}`],
         });
-
-        const price = await stripe.prices.create({
+        const price = await stripe.products.create({
           product: product.id,
           unit_amount: products[i].price * 100,
           currency: "usd",
         });
-
-        line_items.push({
+        cart_items.push({
           price: price.id,
           quantity: 1,
         });
       }
-
-      const session = await stripe.checkout.sessions.create({
+      const session = await stripe.checkout.session.create({
         payment_method_types: ["card"],
-        line_items,
+        cart_items,
         mode: "payment",
-        success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${url}/`,
+        success_url: ``,
+        cancel_url: ``,
       });
-
       return { session: session.id };
     },
   },
