@@ -8,6 +8,10 @@ const categorySchema = new Schema({
     required: true,
     trim: true,
   },
+  gameOrConsole: {
+    type: Boolean,
+    required: true,
+  },
 });
 
 const Category = mongoose.model("Category", categorySchema);
