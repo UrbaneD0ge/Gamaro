@@ -4,6 +4,7 @@ const typeDefs = gql`
   type Category {
     _id: ID
     name: String
+    gameOrConsole: Boolean
   }
 
   type Product {
@@ -11,6 +12,7 @@ const typeDefs = gql`
     name: String
     description: String
     image: String
+    quantity: Int
     price: Float
     category: Category
   }
@@ -21,12 +23,20 @@ const typeDefs = gql`
     products: [Product]
   }
 
+  type Inventory {
+    _id: ID
+    sellDate: String
+    products: [Product]
+  }
+
   type User {
     _id: ID
     firstName: String
     lastName: String
+    userName: String
     email: String
     orders: [Order]
+    inventory: [Inventory]
   }
 
   type Checkout {
@@ -56,6 +66,7 @@ const typeDefs = gql`
       password: String!
     ): Auth
     addOrder(products: [ID]!): Order
+    addInventory(products: [ID!): Inventory
     updateUser(
       firstName: String
       lastName: String
@@ -64,6 +75,7 @@ const typeDefs = gql`
       password: String
     ): User
     updateProduct(_id: ID!): Product
+    updateInventory(_id: ID!): Inventory
     login(email: String!, password: String!): Auth
   }
 `;

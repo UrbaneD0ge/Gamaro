@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const inventorySchema = new Schema({
-  sellerDate: {
+  sellDate: {
     type: Date,
   },
   products: [

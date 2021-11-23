@@ -8,11 +8,9 @@ const categorySchema = new Schema({
     required: true,
     trim: true,
   },
-  game: {
+  gameOrConsole: {
     type: Boolean,
-  },
-  console: {
-    type: Boolean,
+    required: true,
   },
 });
 
