@@ -147,4 +147,3 @@ const resolvers = {
 };
 
 module.exports = resolvers;
-git;
