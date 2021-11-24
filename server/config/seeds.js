@@ -59,6 +59,7 @@ db.once("open", async () => {
       image: "tablet.jpg",
       price: 19.99,
       quantity: 1,
+      condition: "New",
     },
     {
       name: "Atari 7800",
@@ -66,6 +67,8 @@ db.once("open", async () => {
       description: "A weird dvd player",
       price: 9.99,
       quantity: 1,
+
+      condition: "Fair",
     },
     {
       name: "Dreamcast",
@@ -74,6 +77,7 @@ db.once("open", async () => {
       image: "spinning-top.jpg",
       price: 50.99,
       quantity: 2,
+      condition: "Fair",
     },
   ]);
 
