@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "../components/NavBar";
 // import Buy from "../components/Buy";
 // import Sell from "../components/Sell";
 // import Profile from "../components/Profile";
@@ -18,10 +19,27 @@ const Home = () => {
           <Review className="col-md-4 ml-auto">Review</Review>
         </div>
       </div> */}
-      {/* <NavBar /> */}
-      <div className="homeCont">
-        <div className="searchPanel"></div>
-        <div className="feed"></div>
+      <NavBar />
+      <div className="homeCont row">
+        <div className="searchPanel col s3 grey lighten-2" id="search">
+          <h3 className="center">Search</h3>
+          <h5>
+            <form>
+              <h6>Console</h6>
+              <h6>Genre</h6>
+              <h6>Release</h6>
+              <h6>Rating</h6>
+            </form>
+          </h5>
+        </div>
+        <button
+          id="FAB"
+          className="btn btn-floating yellow modal-trigger fixed-action-btn"
+          data-target="modal1"
+        >
+          <span id="play">▶</span>
+        </button>
+        <div className="feed col s9"></div>
       </div>
     </div>
   );
