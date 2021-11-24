@@ -35,6 +35,7 @@ const typeDefs = gql`
     lastName: String
     userName: String
     email: String
+    rating: Int
     orders: [Order]
     inventory: [Inventory]
   }
@@ -73,6 +74,7 @@ const typeDefs = gql`
       userName: String
       email: String
       password: String
+      rating: Int
     ): User
     updateProduct(_id: ID!): Product
     updateInventory(_id: ID!): Inventory

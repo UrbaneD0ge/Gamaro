@@ -32,6 +32,10 @@ const userSchema = new Schema({
     required: true,
     minlength: [8, "Password too short!"],
   },
+  rating: {
+    type: Number,
+    validate: (v) => 5 >= v >= 1,
+  },
   inventory: [Inventory.schema],
   orders: [Order.schema],
 });
