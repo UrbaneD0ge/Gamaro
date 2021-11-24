@@ -10,6 +10,7 @@ const categorySchema = new Schema({
   },
   gameOrConsole: {
     type: Boolean,
+    required: true,
     default: true,
   },
 });
