@@ -6,6 +6,9 @@ const inventorySchema = new Schema({
   sellDate: {
     type: Date,
   },
+  condition: {
+    type: String,
+  },
   products: [
     {
       type: Schema.Types.ObjectId,
