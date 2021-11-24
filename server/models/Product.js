@@ -24,6 +24,9 @@ const productSchema = new Schema({
     min: 1,
     default: 1,
   },
+  condition: {
+    type: String,
+  },
   category: {
     type: Schema.Types.ObjectId,
     ref: "Category",
