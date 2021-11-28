@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/willgresham34/Gamaro",
   "dependencies": {
+    "@apollo/client": "^3.5.5",
     "@stripe/stripe-js": "^1.21.1",
     "gh-pages": "^3.2.3",
     "graphql": "^16.0.1",
