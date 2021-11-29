@@ -9,7 +9,7 @@ export default function NavBar() {
           <a href="#!" class="brand-logo center logo">
             GAMARO
           </a>
-          <ul class="right hide-on-med-and-down">
+          <ul class="right" style={{ paddingRight: "15px" }}>
             <li>
               <Cart />
             </li>

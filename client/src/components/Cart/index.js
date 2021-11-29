@@ -6,6 +6,7 @@ import { idbPromise } from "../../utils/helpers";
 import CartItem from "../CartItem";
 import { useStore } from "../../utils/globalState";
 import { QUERY_CHECKOUT } from "../../utils/queries";
+import "../../styles/cart.css";
 
 const stripePromise = loadStripe(
   "pk_test_51Jz3E3ImJghqatoxgIZwAMgqpwKdV4HBgG2NblBbzI6QQ8FviL7RJj7GyCZ1esWD4eDphh95Zfdu8pSbFYtEb0AM00QDYqoPQu"
@@ -61,14 +62,14 @@ const Cart = () => {
   if (!state.cartOpen) {
     return (
       <div className="min-cart" onClick={toggleCart}>
-        <span>{/* Kip insert your cart image here */}</span>
+        <span> Cart </span>
       </div>
     );
   }
   return (
     <div className="cart">
       <div className="close-btn" onClick={toggleCart}>
-        [close]
+        Close Cart
       </div>
       <div>
         {state.cart.length ? (
