@@ -9,6 +9,7 @@ function Sell() {
     name: "",
     price: 0,
     quantity: 0,
+    condition: "",
     category: "",
     gameOrConsole: false,
     image: null,
@@ -46,6 +47,7 @@ function Sell() {
         name: formState.name,
         price: formState.price,
         quantity: formState.quantity,
+        condition: formState.condition,
         category: formState.category,
         gameOrConsole: formState.gameOrConsole,
         image: formState.image,
@@ -82,6 +84,15 @@ function Sell() {
             name="quantity"
             placeholder=""
             id="quantity"
+            onChange={handleChange}
+          ></input>
+        </div>
+        <div className="">
+          <label htmlFor="condition">Condition:</label>
+          <input
+            name="condition"
+            placeholder=""
+            id="condition"
             onChange={handleChange}
           ></input>
         </div>
