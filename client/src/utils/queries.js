@@ -64,7 +64,7 @@ export const QUERY_CATEGORIES = gql`
     }
 `;
 
-export const QUERY_PRODUCTS = gql`
+export const QUERY_PRODUCTS_NAME = gql`
     query products($category: ID, $name: String) {
         products(category: $category, name: $name) {
             name
@@ -78,3 +78,15 @@ export const QUERY_PRODUCTS = gql`
     }
 `;
 
+// export const QUERY_PRODUCTS_ID = gql`
+//     query products($_id:ID!) {
+//         products()
+//     }`
+
+// export const QUERY_ORDER = gql`
+//     query order($_id: ID!) {
+//         order()
+//     }`
+
+// export const QUERY_CHECKOUT = gql`
+//     query checkout`
