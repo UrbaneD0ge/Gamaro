@@ -1,4 +1,5 @@
 import React from "react";
+import Cart from "../Cart";
 
 export default function NavBar() {
   return (
@@ -10,7 +11,7 @@ export default function NavBar() {
           </a>
           <ul class="right hide-on-med-and-down">
             <li>
-              <a href="stripe.com">Cart</a>
+              <Cart />
             </li>
             {/* <li><button class="btn green btn-flat"><a href="badges.html">[profile]</a></button></li> */}
           </ul>
