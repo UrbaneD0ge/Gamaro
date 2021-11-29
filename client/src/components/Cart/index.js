@@ -4,13 +4,14 @@ import { useLazyQuery } from "@apollo/client";
 import { ADD_MULTIPLE_TO_CART, TOGGLE_CART } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 import CartItem from "../CartItem";
+import { useStore } from "../../utils/globalState";
 
 const stripePromise = loadStripe(
   "pk_test_51Jz3E3ImJghqatoxgIZwAMgqpwKdV4HBgG2NblBbzI6QQ8FviL7RJj7GyCZ1esWD4eDphh95Zfdu8pSbFYtEb0AM00QDYqoPQu"
 );
 
 const Cart = () => {
-  const [state, dispatch] = ""; //global state needed
+  const [state, dispatch] = useStore();
   const [getCheckout, { data }] = useLazyQuery(); // pass query for products into query
 
   useEffect(() => {
