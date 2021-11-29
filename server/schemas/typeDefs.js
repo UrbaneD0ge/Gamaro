@@ -2,13 +2,13 @@ const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type Category {
-    _id: ID
+    _id: ID!
     name: String
-    gameOrConsole: Boolean
+    gameOrConsole: Boolean!
   }
 
   type Product {
-    _id: ID
+    _id: ID!
     name: String
     description: String
     image: String
@@ -18,19 +18,19 @@ const typeDefs = gql`
   }
 
   type Order {
-    _id: ID
+    _id: ID!
     purchaseDate: String
     products: [Product]
   }
 
   type Inventory {
-    _id: ID
+    _id: ID!
     sellDate: String
     products: [Product]
   }
 
   type User {
-    _id: ID
+    _id: ID!
     firstName: String
     lastName: String
     userName: String
