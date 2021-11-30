@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
+import NavBar from "../components/NavBar";
 
 function Login() {
   // set initial form state
@@ -45,49 +46,54 @@ function Login() {
   };
 
   return (
-    <div className="container">
-      <h2>Login</h2>
-      <form onSubmit={handleFormSubmit}>
-        <div className="">
-          <label htmlFor="email">Email address:</label>
-          <input
-            placeholder="youremail@test.com"
-            name="email"
-            type="email"
-            id="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            placeholder="******"
-            name="password"
-            type="password"
-            id="pwd"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="">
-          <label htmlFor="confirmedPwd">Confirm Password:</label>
-          <input
-            placeholder="******"
-            name="confirmedPassword"
-            type="confirmedPassword"
-            id="confirmedPwd"
-            onChange={handleChange}
-          />
-        </div>
-        {error ? (
-          <div>
-            <p className="error-text">The provided credentials are incorrect</p>
+    <div>
+      <NavBar />
+      <div className="container">
+        <h2>Login</h2>
+        <form onSubmit={handleFormSubmit}>
+          <div className="">
+            <label htmlFor="email">Email address:</label>
+            <input
+              placeholder="youremail@test.com"
+              name="email"
+              type="email"
+              id="email"
+              onChange={handleChange}
+            />
           </div>
-        ) : null}
-        <div className="">
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-      <Link to="/signup">← Go to Signup</Link>
+          <div className="">
+            <label htmlFor="pwd">Password:</label>
+            <input
+              placeholder="******"
+              name="password"
+              type="password"
+              id="pwd"
+              onChange={handleChange}
+            />
+          </div>
+          <div className="">
+            <label htmlFor="confirmedPwd">Confirm Password:</label>
+            <input
+              placeholder="******"
+              name="confirmedPassword"
+              type="confirmedPassword"
+              id="confirmedPwd"
+              onChange={handleChange}
+            />
+          </div>
+          {error ? (
+            <div>
+              <p className="error-text">
+                The provided credentials are incorrect
+              </p>
+            </div>
+          ) : null}
+          <div className="">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+        <Link to="/signup">← Go to Signup</Link>
+      </div>
     </div>
   );
 }

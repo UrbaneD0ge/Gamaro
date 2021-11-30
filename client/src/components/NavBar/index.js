@@ -7,9 +7,9 @@ export default function NavBar() {
     <div>
       <nav>
         <div class="nav-wrapper black">
-          <a href="#!" class="brand-logo center logo">
+          <Link to="/" class="brand-logo center logo">
             GAMARO
-          </a>
+          </Link>
           <ul class="right" style={{ paddingRight: "15px" }}>
             <li>
               <Cart />
