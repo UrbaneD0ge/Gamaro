@@ -39,31 +39,6 @@ const Home = () => {
           // onClick={modal1.open()}
         >
           <span id="play">▶</span>
-<<<<<<< HEAD
-        </button>
-        {/* Modal content */}
-        <div>
-          <h1 class="hide logo center">START</h1>
-        </div>
-        <div id="pad" className="hide container">
-          <div className="row d-flex">
-            <div className="col">
-              <button className="btn btn-floating red"></button>
-              <h5 className="logo">Buy</h5>
-              <button className="btn btn-floating blue"></button>
-              <h5 className="logo">Sell</h5>
-            </div>
-            <div class="row">
-              <button className="btn btn-floating green"></button>
-              <h5 className="logo">Profile</h5>
-              <button className="btn btn-floating yellow"></button>
-              <h5 className="logo">Review</h5>
-            </div>
-          </div>
-        </div>
-        {/* End Modal */}
-        <div className="feed col s9"></div>
-=======
         </button> <br></br>
 {/* Modal content */}
         <div><h1 className="hide logo center">START</h1></div>
@@ -102,7 +77,6 @@ const Home = () => {
          </div>
       </article>
         </div>
->>>>>>> 70f6f9115248eedd731373a0b30fcd32e12675ee
       </div>
     </div>
   );
