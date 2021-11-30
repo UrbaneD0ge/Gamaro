@@ -76,7 +76,6 @@ const typeDefs = gql`
       quantity: Int!
       price: Float!
       condition: String!
-      category: Category
     ): Product
     updateUser(
       firstName: String

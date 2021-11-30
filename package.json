@@ -2,6 +2,7 @@
   "name": "gamaro",
   "version": "0.1.0",
   "private": true,
+  "main": "server/server.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/user-event": "^12.8.3",
@@ -20,7 +21,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "seed": "node server/config/seeds.js"
+    "seed": "node server/config/seeds.js",
+    "install": "cd server && npm i && cd ../client && npm i"
   },
   "eslintConfig": {
     "extends": [
