@@ -44,7 +44,7 @@ const Home = () => {
         // onClick={modal1.open()}
         >
           <span id="play">▶</span>
-        </button>
+        </button> <br></br>
 {/* Modal content */}
         <div><h1 className="hide logo center">START</h1></div>
     <div id="pad" className="hide container">
