@@ -1,19 +1,15 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.code {
-  font-family: 'VT323', monospace;
-}
-
-.sell {
-  position: relative;
-  bottom: 2vh
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 main {
@@ -59,8 +55,8 @@ p {
 }
 
 .logo {
-  font-family: 'VT323', monospace;
-  letter-spacing: .14em;
+  font-family: "VT323", monospace;
+  letter-spacing: 0.14em;
   font-size: 6rem !important;
 }
 
@@ -80,7 +76,7 @@ p {
 
 @media (min-width: 960px) {
   #pad {
-  transform: rotate(40deg);
+    transform: rotate(40deg);
   }
 
   #pad h5 {
@@ -115,7 +111,5 @@ p {
 }
 
 #search {
-  height: 100vh;
-  z-index: -997;
-  position: fixed;
+  height: 90vh;
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import NavBar from "../components/NavBar";
+import Search from "../components/SearchBar";
 import M from "materialize-css";
 // import Buy from "../components/Buy";
 // import Sell from "../components/Sell";
 // import Profile from "../components/Profile";
 // import Review from "../components/Review";
-
 var modal = document.getElementById("modal1");
 M.Modal.init(modal);
 
@@ -29,21 +29,41 @@ const Home = () => {
           <br/> <br/>
           <h3 className="center">Search</h3>
           <h5>
-            <form>
-              <h6>Console</h6>
-              <h6>Genre</h6>
-              <h6>Release</h6>
-              <h6>Rating</h6>
-            </form>
+            <Search />
           </h5>
         </div>
         <button
           id="modal1"
           className="btn btn-floating yellow modal-trigger fixed-action-btn"
           data-target="modal1"
-        // onClick={modal1.open()}
+          // onClick={modal1.open()}
         >
           <span id="play">▶</span>
+<<<<<<< HEAD
+        </button>
+        {/* Modal content */}
+        <div>
+          <h1 class="hide logo center">START</h1>
+        </div>
+        <div id="pad" className="hide container">
+          <div className="row d-flex">
+            <div className="col">
+              <button className="btn btn-floating red"></button>
+              <h5 className="logo">Buy</h5>
+              <button className="btn btn-floating blue"></button>
+              <h5 className="logo">Sell</h5>
+            </div>
+            <div class="row">
+              <button className="btn btn-floating green"></button>
+              <h5 className="logo">Profile</h5>
+              <button className="btn btn-floating yellow"></button>
+              <h5 className="logo">Review</h5>
+            </div>
+          </div>
+        </div>
+        {/* End Modal */}
+        <div className="feed col s9"></div>
+=======
         </button> <br></br>
 {/* Modal content */}
         <div><h1 className="hide logo center">START</h1></div>
@@ -82,6 +102,7 @@ const Home = () => {
          </div>
       </article>
         </div>
+>>>>>>> 70f6f9115248eedd731373a0b30fcd32e12675ee
       </div>
     </div>
   );
