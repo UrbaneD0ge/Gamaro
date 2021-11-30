@@ -1,0 +1,7 @@
+.cart {
+  background-color: rgb(224, 224, 224);
+  position: fixed;
+  top: 64px;
+  right: 0;
+  color: black;
+}
