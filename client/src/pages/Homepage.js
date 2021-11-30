@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import Search from "../components/SearchBar";
 import M from "materialize-css";
+import Feed from "../components/Feed";
 // import Buy from "../components/Buy";
 // import Sell from "../components/Sell";
 // import Profile from "../components/Profile";
@@ -26,7 +27,7 @@ const Home = () => {
       <NavBar />
       <div className="homeCont row">
         <div className="searchPanel col s3 grey lighten-2" id="search">
-          <br/> <br/>
+          <br /> <br />
           <h3 className="center">Search</h3>
           <h5>
             <Search />
@@ -39,43 +40,55 @@ const Home = () => {
           // onClick={modal1.open()}
         >
           <span id="play">▶</span>
-        </button> <br></br>
-{/* Modal content */}
-        <div><h1 className="hide logo center">START</h1></div>
-    <div id="pad" className="hide container">
-      <div className
-    ="row d-flex">
-        <div className
-      ="col">
-    <button className="btn btn-floating red"></button><h5
-    className
-    ="logo">Buy</h5>
-    <button className="btn btn-floating blue"></button><h5
-    className
-    ="logo">Sell</h5></div><div className="row">
-    <button className="btn btn-floating green"></button><h5
-    className
-    ="logo">Profile</h5>
-    <button className="btn btn-floating yellow"></button><h5
-    className
-                ="logo">Review</h5>
+        </button>{" "}
+        <br></br>
+        {/* Modal content */}
+        <div>
+          <h1 className="hide logo center">START</h1>
         </div>
-      </div>
-    </div>
+        <div id="pad" className="hide container">
+          <div className="row d-flex">
+            <div className="col">
+              <button className="btn btn-floating red"></button>
+              <h5 className="logo">Buy</h5>
+              <button className="btn btn-floating blue"></button>
+              <h5 className="logo">Sell</h5>
+            </div>
+            <div className="row">
+              <button className="btn btn-floating green"></button>
+              <h5 className="logo">Profile</h5>
+              <button className="btn btn-floating yellow"></button>
+              <h5 className="logo">Review</h5>
+            </div>
+          </div>
+        </div>
         {/* End Modal */}
         <div className="feed col s9 right">
-
-
-        {/* demo content block */}
-      <article className='container d-flex row'>
-         <img className="profile" src="https://i.ibb.co/9twjYxJ/00100l-PORTRAIT-00100-BURST20190919181515033-COVER-2.jpg" alt="Profile"></img>
-         <div className='col grey lighten-1 content'>
-           <img className='col right' src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1o4d.png" alt="Game cover"></img>
-           <h4>$Username is $transactionType $title</h4>
-              <p> $description Recently got my hands on this classic city building sim and want to find a good home for it! Message me with your best offer! PC only, but the disk is in great condition, tested just fine on my computer.</p>
+          {/* demo content block */}
+          <article className="container d-flex row">
+            <img
+              className="profile"
+              src="https://i.ibb.co/9twjYxJ/00100l-PORTRAIT-00100-BURST20190919181515033-COVER-2.jpg"
+              alt="Profile"
+            ></img>
+            <div className="col grey lighten-1 content">
+              <img
+                className="col right"
+                src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1o4d.png"
+                alt="Game cover"
+              ></img>
+              <h4>$Username is $transactionType $title</h4>
+              <p>
+                {" "}
+                $description Recently got my hands on this classic city building
+                sim and want to find a good home for it! Message me with your
+                best offer! PC only, but the disk is in great condition, tested
+                just fine on my computer.
+              </p>
               <button className="btn red sell code right">$Buy It!</button>
-         </div>
-      </article>
+            </div>
+          </article>
+          <Feed />
         </div>
       </div>
     </div>

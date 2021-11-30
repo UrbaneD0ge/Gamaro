@@ -7,7 +7,7 @@ export default function NavBar() {
     <div>
       <nav>
         <div class="nav-wrapper black">
-          <Link to="/" class="brand-logo center logo">
+          <Link to="/willgresham34/Gamaro" class="brand-logo center logo">
             GAMARO
           </Link>
           <ul class="right" style={{ paddingRight: "15px" }}>

@@ -116,3 +116,33 @@ export const QUERY_ORDER = gql`
     }
   }
 `;
+
+// export const QUERY_PRODUCTS = gql`
+//   query getProducts($category: ID) {
+//     products(category: $category) {
+//       _id
+//       name
+//       description
+//       price
+//       quantity
+//       image
+//       category {
+//         _id
+//       }
+//     }
+//   }
+// `;
+
+export const QUERY_PRODUCTS = gql`
+  query Query($category: ID, $name: String) {
+    products(category: $category, name: $name) {
+      _id
+      name
+      description
+      price
+      image
+      quantity
+      condition
+    }
+  }
+`;
