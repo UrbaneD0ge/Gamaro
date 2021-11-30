@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Product, Category, Order } = require("../models");
+const { User, Product, Inventory, Category, Order } = require("../models");
 const { signToken } = require("../utils/auth");
 const stripe = require("stripe")(
   "sk_test_51Jz3E3ImJghqatoxy66Mf1qLtKLbjHkQz6BkzoRSFL8LYrlu0h6zGZ2ZKS5puyO44y3y3QDetEHb8qBd4stWHqCV00cjsl2lOd"
@@ -94,6 +94,26 @@ const resolvers = {
 
       return { token, user };
     },
+
+    addInventory: async (parent, { products }, context) => {
+      console.log(context);
+      if (context.user) {
+        const inventory = new Inventory({ products });
+
+        await User.findByIdAndUpdate(context.user._id, {
+          $push: { inventory: inventory },
+        });
+
+        return inventory;
+      }
+    },
+
+    addProduct: async (parent, args) => {
+      const product = await Product.create(args);
+
+      return product;
+    },
+
     addOrder: async (parent, { products }, context) => {
       console.log(context);
       if (context.user) {
