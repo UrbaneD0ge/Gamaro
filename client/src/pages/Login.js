@@ -11,7 +11,6 @@ function Login() {
   const [formState, setFormState] = useState({
     email: "",
     password: "",
-    confirmedPassword: "",
   });
 
   // login from utils mutations
@@ -29,19 +28,14 @@ function Login() {
   // handle form submit
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-
-    if (formState.confirmedPassword !== formState.password) {
-      alert("Confirmed password is not the same!");
-    } else {
-      try {
-        const mutationResponse = await login({
-          variables: { email: formState.email, password: formState.password },
-        });
-        const token = mutationResponse.data.login.token;
-        Auth.login(token);
-      } catch (e) {
-        console.log(e);
-      }
+    try {
+      const mutationResponse = await login({
+        variables: { email: formState.email, password: formState.password },
+      });
+      const token = mutationResponse.data.login.token;
+      Auth.login(token);
+    } catch (e) {
+      console.log(e);
     }
   };
 
