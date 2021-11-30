@@ -1,0 +1,19 @@
+.cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subBtn {
+  text-align: center;
+  max-height: 25px;
+  max-width: 75px;
+  margin: 15px;
+  align-self: center;
+}
+
+.form {
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+}
