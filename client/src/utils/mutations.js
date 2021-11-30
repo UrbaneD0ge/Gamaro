@@ -36,7 +36,7 @@ export const LOGIN = gql`
   }
 `;
 
-// ADD_PRODUCT
+// add product
 export const ADD_PRODUCT = gql`
 mutation addProduct($name: String!, $description: String!, $image: String!, $condition: String!, $price: Number!, $quantity: Number!) {
   addProduct(
