@@ -1,5 +1,5 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Product, Category, Order } = require("../models");
+const { User, Product, Inventory, Category, Order } = require("../models");
 const { signToken } = require("../utils/auth");
 const stripe = require("stripe")(
   "sk_test_51Jz3E3ImJghqatoxy66Mf1qLtKLbjHkQz6BkzoRSFL8LYrlu0h6zGZ2ZKS5puyO44y3y3QDetEHb8qBd4stWHqCV00cjsl2lOd"
@@ -28,19 +28,21 @@ const resolvers = {
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate("category");
     },
-    user: async (parent, args, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: "orders.products",
-          populate: "category",
-        });
+    // user: async (parent, args, context) => {
+    //   if (context.user) {
+    //     // const user = await User.findById(context.user._id).populate({
+    //     //   path: "orders.products",
+    //     //   populate: "category",
+    //     // });
 
-        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+    //     user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
-        return user;
-      }
-
-      throw new AuthenticationError("Not logged in");
+    //     return user;
+    //   }
+    //   throw new AuthenticationError("Not logged in");
+    // },
+    user: async () => {
+      return User.find();
     },
     order: async (parent, { _id }, context) => {
       if (context.user) {
@@ -88,12 +90,41 @@ const resolvers = {
     },
   },
   Mutation: {
-    addUser: async (parent, args) => {
-      const user = await User.create(args);
+    addUser: async (
+      parent,
+      { firstName, lastName, userName, email, password }
+    ) => {
+      const user = await User.create({
+        firstName,
+        lastName,
+        userName,
+        email,
+        password,
+      });
       const token = signToken(user);
 
       return { token, user };
     },
+
+    addInventory: async (parent, { products }, context) => {
+      console.log(context);
+      if (context.user) {
+        const inventory = new Inventory({ products });
+
+        await User.findByIdAndUpdate(context.user._id, {
+          $push: { inventory: inventory },
+        });
+
+        return inventory;
+      }
+    },
+
+    addProduct: async (parent, args) => {
+      const product = await Product.create(args);
+
+      return product;
+    },
+
     addOrder: async (parent, { products }, context) => {
       console.log(context);
       if (context.user) {

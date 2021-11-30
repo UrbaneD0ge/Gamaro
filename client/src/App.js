@@ -38,7 +38,6 @@ const App = () => (
     <Router>
       <div>
         <StoreProvider>
-          {/* <Homepage />; */}
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/login" element={<Login />} />

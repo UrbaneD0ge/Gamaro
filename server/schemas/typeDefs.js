@@ -69,6 +69,14 @@ const typeDefs = gql`
     ): Auth
     addOrder(products: [ID]!): Order
     addInventory(products: [ID]!): Inventory
+    addProduct(
+      name: String!
+      description: String!
+      image: String!
+      quantity: Int!
+      price: Float!
+      condition: String!
+    ): Product
     updateUser(
       firstName: String
       lastName: String
@@ -78,7 +86,6 @@ const typeDefs = gql`
       rating: Int
     ): User
     updateProduct(_id: ID!): Product
-    updateInventory(_id: ID!): Inventory
     login(email: String!, password: String!): Auth
   }
 `;

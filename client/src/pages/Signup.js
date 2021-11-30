@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
-
 import Auth from "../utils/auth";
-
 import { ADD_USER } from "../utils/mutations";
 import NavBar from "../components/NavBar";
+import "../styles/signup.css";
 
 function Signup() {
   // set initial form state
@@ -55,40 +54,40 @@ function Signup() {
   return (
     <div>
       <NavBar />
-      <div className="container">
+      <div className="cont">
         <h2>Signup</h2>
-        <form onSubmit={handleFormSubmit}>
-          <div className="">
+        <form className="form" onSubmit={handleFormSubmit}>
+          <div className="firstInp">
             <label htmlFor="firstName">First Name:</label>
             <input
               placeholder="First"
               name="firstName"
-              type="firstName"
+              type="text"
               id="firstName"
               onChange={handleChange}
             />
           </div>
-          <div className="">
+          <div className="lastInp">
             <label htmlFor="lastName">Last Name:</label>
             <input
               placeholder="Last"
               name="lastName"
-              type="lastName"
+              type="text"
               id="lastName"
               onChange={handleChange}
             />
           </div>
-          <div className="">
+          <div className="userInp">
             <label htmlFor="userName">Username:</label>
             <input
               placeholder="Username"
               name="userName"
-              type="userName"
+              type="text"
               id="userName"
               onChange={handleChange}
             />
           </div>
-          <div className="">
+          <div className="emailInp">
             <label htmlFor="email">Email:</label>
             <input
               placeholder="youremail@test.com"
@@ -98,7 +97,7 @@ function Signup() {
               onChange={handleChange}
             />
           </div>
-          <div className="">
+          <div className="passInp">
             <label htmlFor="pwd">Password:</label>
             <input
               placeholder="******"
@@ -108,19 +107,19 @@ function Signup() {
               onChange={handleChange}
             />
           </div>
-          <div className="">
+          <div className="passInp">
             <label htmlFor="confirmedPwd">Confirm Password:</label>
             <input
               placeholder="******"
               name="confirmedPassword"
-              type="confirmedPassword"
+              type="password"
               id="confirmedPwd"
               onChange={handleChange}
             />
           </div>
-          <div className="">
-            <button type="submit">Submit</button>
-          </div>
+          <button className="subBtn" type="submit">
+            Submit
+          </button>
         </form>
         <Link to="/login">← Go to Login</Link>
       </div>
