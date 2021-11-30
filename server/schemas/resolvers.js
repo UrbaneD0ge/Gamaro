@@ -28,19 +28,21 @@ const resolvers = {
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate("category");
     },
-    user: async (parent, args, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: "orders.products",
-          populate: "category",
-        });
+    // user: async (parent, args, context) => {
+    //   if (context.user) {
+    //     // const user = await User.findById(context.user._id).populate({
+    //     //   path: "orders.products",
+    //     //   populate: "category",
+    //     // });
 
-        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+    //     user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
 
-        return user;
-      }
-
-      throw new AuthenticationError("Not logged in");
+    //     return user;
+    //   }
+    //   throw new AuthenticationError("Not logged in");
+    // },
+    user: async () => {
+      return User.find();
     },
     order: async (parent, { _id }, context) => {
       if (context.user) {
@@ -88,8 +90,17 @@ const resolvers = {
     },
   },
   Mutation: {
-    addUser: async (parent, args) => {
-      const user = await User.create(args);
+    addUser: async (
+      parent,
+      { firstName, lastName, userName, email, password }
+    ) => {
+      const user = await User.create({
+        firstName,
+        lastName,
+        userName,
+        email,
+        password,
+      });
       const token = signToken(user);
 
       return { token, user };
