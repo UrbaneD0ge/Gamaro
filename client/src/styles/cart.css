@@ -4,4 +4,10 @@
   top: 64px;
   right: 0;
   color: black;
+  padding: 15px;
+}
+
+.close-btn {
+  text-align: end;
+  padding-right: 15px;
 }

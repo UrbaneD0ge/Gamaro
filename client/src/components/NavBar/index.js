@@ -1,6 +1,7 @@
 import React from "react";
 import Cart from "../Cart";
 import { Link } from "react-router-dom";
+import Auth from "../../utils/auth";
 
 export default function NavBar() {
   return (
@@ -16,6 +17,11 @@ export default function NavBar() {
             </li>
             <li>
               <Link to="/login"> Login</Link>
+            </li>
+            <li>
+              <a href="/" onClick={() => Auth.logout()}>
+                Logout
+              </a>
             </li>
             {/* <li><button class="btn green btn-flat"><a href="badges.html">[profile]</a></button></li> */}
           </ul>
