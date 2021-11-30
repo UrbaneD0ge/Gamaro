@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "seed": "node config/seeds.js"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,8 @@
   },
   "homepage": "https://github.com/willgresham34/Gamaro#readme",
   "dependencies": {
-    "apollo-server-express": "^3.5.0",
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
-    "graphql": "^15.7.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.13",
     "morgan": "^1.10.0",

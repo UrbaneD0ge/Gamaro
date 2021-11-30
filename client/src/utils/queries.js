@@ -64,23 +64,63 @@ export const QUERY_CATEGORIES = gql`
   }
 `;
 
-export const QUERY_PRODUCTS = gql`
-  query products($category: ID, $name: String) {
-    products(category: $category, name: $name) {
-      name
-      description
-      image
-      price
-      quantity
-      condition
-      category
+export const QUERY_PRODUCTS_NAME = gql`
+    query products($category: ID, $name: String) {
+        products(category: $category, name: $name) {
+            name
+            description
+            image
+            price
+            quantity
+            condition
+            category
+        }
     }
-  }
 `;
+
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
     checkout(products: $products) {
       session
     }
   }
+`;
+
+export const QUERY_PRODUCTS_ID = gql`
+    query products($id:ID!) {
+        products(id: $id) {
+            name
+            description
+            image
+            price
+            quantity
+            condition
+            category
+        }
+    }
+`;
+
+export const QUERY_ORDER = gql`
+    query order($id: ID!) {
+        order(id: $id) {
+            purchaseDate
+            products {
+                name
+                description
+                image
+                price
+                quantity
+                condition
+                category
+            }
+        }
+    }
+`;
+
+export const QUERY_CHECKOUT = gql`
+    query checkout($products: [ID]!){
+        checkout(products: $products) {
+            session
+        }
+    }
 `;

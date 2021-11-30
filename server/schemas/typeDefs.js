@@ -53,28 +53,28 @@ const typeDefs = gql`
   type Query {
     categories: [Category]
     products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
+    product(id: ID!): Product
     user: User
-    order(_id: ID!): Order
+    order(id: ID!): Order
     checkout(products: [ID]!): Checkout
   }
 
   type Mutation {
     addUser(
-      firstName: String!
-      lastName: String!
-      userName: String!
-      email: String!
+      firstName: String!,
+      lastName: String!,
+      userName: String!,
+      email: String!,
       password: String!
     ): Auth
     addOrder(products: [ID]!): Order
     addInventory(products: [ID]!): Inventory
     updateUser(
-      firstName: String
-      lastName: String
-      userName: String
-      email: String
-      password: String
+      firstName: String,
+      lastName: String,
+      userName: String,
+      email: String,
+      password: String,
       rating: Int
     ): User
     updateProduct(_id: ID!): Product
