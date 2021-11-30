@@ -36,22 +36,22 @@ export const LOGIN = gql`
   }
 `;
 
-// ADD_PRODUCT
-export const ADD_PRODUCT = gql`
-mutation addProduct($name: String!, $description: String!, $image: String!, $condition: String!, $price: Number!, $quantity: Number!) {
-  addProduct(
-    name: $name,
-    description: $description,
-    image: $image,
-    condition: $condition,
-    price: $price,
-    quantity: $quantity
-    ) {
-      category {
-        name: $category,
-        gameOrConsole: $gameOrConsole
+// add product
+// export const ADD_PRODUCT = gql`
+// mutation addProduct($name: String!, $description: String!, $image: String!, $condition: String!, $price: Number!, $quantity: Number!) {
+//   addProduct(
+//     name: $name,
+//     description: $description,
+//     image: $image,
+//     condition: $condition,
+//     price: $price,
+//     quantity: $quantity
+//     ) {
+//       category {
+//         name: $category,
+//         gameOrConsole: $gameOrConsole
 
-      }
-    }
-}
-`;
+//       }
+//     }
+// }
+// `;

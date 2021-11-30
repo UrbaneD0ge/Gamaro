@@ -9,6 +9,10 @@ import {
 } from "@apollo/client";
 import { StoreProvider } from "./utils/globalState";
 import { setContext } from "@apollo/client/link/context";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+
 //Apollo Client stuff
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -31,11 +35,18 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <div>
-      <StoreProvider>
-        <Homepage />;
-      </StoreProvider>
-    </div>
+    <Router>
+      <div>
+        <StoreProvider>
+          {/* <Homepage />; */}
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
+        </StoreProvider>
+      </div>
+    </Router>
   </ApolloProvider>
 );
 
