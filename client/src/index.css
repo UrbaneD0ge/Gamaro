@@ -7,22 +7,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.code {
+  font-family: 'VT323', monospace;
+}
+
+.sell {
+  position: relative;
+  bottom: 2vh
 }
 
 main {
   height: 100% !important;
 }
 
-button {
-  width: 12vw !important;
-  height: 12vw !important;
+#modal1 {
+  width: 10vw !important;
+  height: 10vw !important;
+}
+
+nav {
+  position: fixed;
+}
+
+article {
+  margin: 5vw !important;
+  width: 75vw !important;
+  min-height: 20vh;
+  padding: 0 5vmin !important;
 }
 
 p {
   font-size: 1.2rem;
+
 }
 
 #pad button {
@@ -58,6 +74,10 @@ p {
   aspect-ratio: 1;
 }
 
+.row {
+  margin: 0 !important;
+}
+
 @media (min-width: 960px) {
   #pad {
   transform: rotate(40deg);
@@ -87,12 +107,15 @@ p {
 }
 
 #modal1 {
-  position: relative;
-  left: 45vw;
+  position: fixed;
+  left: 75vw;
+  top: 5vh;
   z-index: 997;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 #search {
-  height: 90vh;
+  height: 100vh;
+  z-index: -997;
+  position: fixed;
 }
