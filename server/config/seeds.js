@@ -79,6 +79,34 @@ db.once("open", async () => {
       quantity: 2,
       condition: "Fair",
     },
+    {
+      name: "Super Mario 64",
+      category: categories[4],
+      description:
+        "Classic that is really hard for me to let go, but it's time.",
+      image: "spinning-top.jpg",
+      price: 65.99,
+      quantity: 1,
+      condition: "Fair",
+    },
+    {
+      name: "Sonic Adventure",
+      category: categories[4],
+      description: "Everyone's favorite Blue-haired hedgehog in action",
+      image: "spinning-top.jpg",
+      price: 50.99,
+      quantity: 1,
+      condition: "Good",
+    },
+    {
+      name: "Asteroids",
+      category: categories[4],
+      description: "Even you need a description of this game then dont buy it.",
+      image: "spinning-top.jpg",
+      price: 50.99,
+      quantity: 1,
+      condition: "Fair",
+    },
   ]);
 
   console.log("inventory seeded");
