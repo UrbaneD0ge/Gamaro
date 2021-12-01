@@ -32,6 +32,7 @@ const Modal = () => {
           <h5 className="logo">Review</h5></a>
         </div>
       </div>
+      </div>
     </div>
   );
 };
