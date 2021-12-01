@@ -9,7 +9,7 @@ const Modal = () => {
   return (
   <div id="modal1" className="modal">
     <div id="modal-header">
-      <h1 className="logo center">START</h1>
+      <h1 className="code center">START</h1>
     </div>
     <div id="pad" className="container">
       <div className="row">
