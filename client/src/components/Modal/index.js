@@ -1,9 +1,11 @@
 import M from "materialize-css";
+import Sell from "../Sell/index";
+import Profile from "../profile/index";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const modInit = document.getElementById("modal1");
   M.Modal.init(modInit);
-})
+});
 
 const Modal = () => {
   return (
@@ -31,8 +33,7 @@ const Modal = () => {
         </div>
       </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
 export default Modal;

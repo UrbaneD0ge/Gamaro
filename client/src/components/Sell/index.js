@@ -42,7 +42,7 @@ function Sell() {
 
   // handle form submit
   const handleFormSubmit = async (event) => {
-    const mutationResponse = await addProduct({
+    await addProduct({
       variables: {
         name: formState.name,
         price: formState.price,
@@ -115,8 +115,8 @@ function Sell() {
             id="gameOrConsole"
             onChange={handleChange}
           >
-            <option value="true">true</option>
-            <option value="false">false</option>
+            <option value="true">Game</option>
+            <option value="false">Console</option>
           </select>
         </div>
 
