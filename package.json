@@ -14,7 +14,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "start": "concurrently \"cd server && npm run watch\" \"cd client && npm start\" \"node server/config/seeds.js\"",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "build": " cd client && npm run build",
     "test": "react-scripts test",
