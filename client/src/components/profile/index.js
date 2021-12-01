@@ -1,14 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useQuery } from "@apollo/client";
-import { useMutation } from "@apollo/client";
 
-import { QUERY_SINGLE_USER, QUERY_PRODUCTS } from "../../utils/queries";
+import { QUERY_SINGLE_USER } from "../../utils/queries";
 
 function Profile() {
   const { loading, data } = useQuery(QUERY_SINGLE_USER);
   const user = data?.user || [];
-
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
   const products = data?.products || [];
   console.log(products);
 
@@ -21,9 +18,7 @@ function Profile() {
           </div>
           {user.userName}
         </div>
-        <button type="submit" onClick={handleUpdate}>
-          Edit Profile
-        </button>
+        <button type="submit">Edit Profile</button>
         <div>
           <h5>Your Seller Rating</h5>
           <div>
