@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/willgresham34/Gamaro/issues"
   },
-  "homepage": "https://github.com/willgresham34/Gamaro",
+  "homepage": ".",
   "dependencies": {
     "@apollo/client": "^3.5.5",
     "@stripe/stripe-js": "^1.21.1",

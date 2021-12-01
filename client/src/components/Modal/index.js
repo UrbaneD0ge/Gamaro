@@ -1,7 +1,9 @@
 import M from "materialize-css";
 
-const modInit = document.getElementById("modal1");
-M.Modal.init(modInit);
+document.addEventListener('DOMContentLoaded', () => {
+  const modInit = document.getElementById("modal1");
+  M.Modal.init(modInit);
+})
 
 const Modal = () => {
   return (

@@ -69,9 +69,10 @@ p {
   margin: 0 !important;
 }
 
-/* .modal {
-  overflow: hidden;
-} */
+.modal {
+  overflow: visible !important;
+  border-radius: 25% !important;
+}
 
 .modal-btn {
   height: 10vh !important;
