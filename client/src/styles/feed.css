@@ -1,0 +1,27 @@
+.profile {
+  right: 35vw;
+  top: 15vh;
+  height: 8vmax;
+  border-radius: 500px;
+  object-fit: cover;
+  aspect-ratio: 1;
+  margin: 20px 0px;
+}
+
+.post {
+  margin: 50px;
+  max-height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sell {
+  position: relative;
+  bottom: 1vw;
+}
+
+.gameImg {
+  width: 15vmin;
+  border-right: auto;
+  margin: 2vmin;
+}

@@ -45,14 +45,6 @@ function Search() {
     });
   };
 
-  // const options = [
-  //   { value: "Sega", label: "Sega" },
-  //   { value: "Nintendo", label: "Nintendo" },
-  //   { value: "Xbox", label: "Xbox" },
-  //   { value: "PlayStation", label: "PlayStation" },
-  //   { value: "Atari", label: "Atari" },
-  // ];
-
   return (
     <div>
       {categories.map((category) => (
@@ -66,8 +58,6 @@ function Search() {
           {category.name}
         </button>
       ))}
-      {/* <h5>Console</h5>
-      <Select options={options} /> */}
     </div>
   );
 }
