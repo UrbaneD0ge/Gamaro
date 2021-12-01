@@ -15,7 +15,7 @@ const Home = () => {
       <div className="homeCont row">
         <div className="searchPanel col s3 grey lighten-2" id="search">
           <br /> <br />
-          <h3 className="center">Search</h3>
+          <h3 className="center code">Search</h3>
           <h5>
             <Search />
           </h5>
