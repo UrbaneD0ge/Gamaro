@@ -65,17 +65,17 @@ export const QUERY_CATEGORIES = gql`
 `;
 
 export const QUERY_PRODUCTS_NAME = gql`
-    query products($category: ID, $name: String) {
-        products(category: $category, name: $name) {
-            name
-            description
-            image
-            price
-            quantity
-            condition
-            category
-        }
+  query products($category: ID, $name: String) {
+    products(category: $category, name: $name) {
+      name
+      description
+      image
+      price
+      quantity
+      condition
+      category
     }
+  }
 `;
 
 export const QUERY_CHECKOUT = gql`
@@ -87,32 +87,62 @@ export const QUERY_CHECKOUT = gql`
 `;
 
 export const QUERY_PRODUCTS_ID = gql`
-    query products($id:ID!) {
-        products(id: $id) {
-            name
-            description
-            image
-            price
-            quantity
-            condition
-            category
-        }
+  query products($id: ID!) {
+    products(id: $id) {
+      name
+      description
+      image
+      price
+      quantity
+      condition
+      category
     }
+  }
 `;
 
 export const QUERY_ORDER = gql`
-    query order($id: ID!) {
-        order(id: $id) {
-            purchaseDate
-            products {
-                name
-                description
-                image
-                price
-                quantity
-                condition
-                category
-            }
-        }
+  query order($id: ID!) {
+    order(id: $id) {
+      purchaseDate
+      products {
+        name
+        description
+        image
+        price
+        quantity
+        condition
+        category
+      }
     }
+  }
+`;
+
+// export const QUERY_PRODUCTS = gql`
+//   query getProducts($category: ID) {
+//     products(category: $category) {
+//       _id
+//       name
+//       description
+//       price
+//       quantity
+//       image
+//       category {
+//         _id
+//       }
+//     }
+//   }
+// `;
+
+export const QUERY_PRODUCTS = gql`
+  query Query($category: ID, $name: String) {
+    products(category: $category, name: $name) {
+      _id
+      name
+      description
+      price
+      image
+      quantity
+      condition
+    }
+  }
 `;
