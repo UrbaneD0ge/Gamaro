@@ -2,11 +2,12 @@ import React from "react";
 import { useStore } from "../../utils/globalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
+import "../../styles/feed.css";
 
 function ProductItem(item) {
   const [state, dispatch] = useStore();
 
-  const { image, name, _id, price, description } = item;
+  const { image, name, _id, price, description, userName } = item;
 
   const { cart } = state;
 
@@ -32,14 +33,26 @@ function ProductItem(item) {
   };
 
   return (
-    <div className="card px-1 py-1">
-      <img alt={name} src={`/images/${image}`} />
-      <p>{name}</p>
-      <div> ${description} </div>
+    <div className="post grey lighten-1">
+      <img
+        className="profile"
+        src="https://i.ibb.co/9twjYxJ/00100l-PORTRAIT-00100-BURST20190919181515033-COVER-2.jpg"
+        alt="Profile"
+      ></img>
       <div>
-        <span>${price}</span>
+        <h4>
+          Kippo357 is selling {name} for ${price}
+        </h4>
+        <p>{description}</p>
+        <button className="btn red buyBtn" onClick={addToCart}>
+          $Buy It!
+        </button>
       </div>
-      <button onClick={addToCart}>Add to cart</button>
+      <img
+        className="gameImg"
+        src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1o4d.png"
+        alt="Game cover"
+      ></img>
     </div>
   );
 }

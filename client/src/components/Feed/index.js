@@ -55,6 +55,7 @@ function Feed() {
               image={product.image}
               name={product.name}
               price={product.price}
+              userName={product.userName}
               description={product.description}
             />
           ))}
