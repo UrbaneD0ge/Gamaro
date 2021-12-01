@@ -12,18 +12,22 @@ const Modal = () => {
       <h1 className="logo center">START</h1>
     </div>
     <div id="pad" className="container">
-      <div className="row d-flex">
+      <div className="row">
         <div className="col">
+          <a href='/Buy'>
           <button className="btn btn-floating red"></button>
-          <h5 className="logo">Buy</h5>
+          <h5 className="logo">Buy</h5></a>
+          <a href='/Sell'>
           <button className="btn btn-floating blue"></button>
-          <h5 className="logo">Sell</h5>
+          <h5 className="logo">Sell</h5></a>
         </div>
-        <div className="row">
+        <div className="col">
+          <a href='/Profile'>
           <button className="btn btn-floating green"></button>
-          <h5 className="logo">Profile</h5>
+          <h5 className="logo">Profile</h5></a>
+          <a href='/Review'>
           <button className="btn btn-floating yellow"></button>
-          <h5 className="logo">Review</h5>
+          <h5 className="logo">Review</h5></a>
         </div>
       </div>
     </div>
