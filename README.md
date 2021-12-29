@@ -50,6 +50,8 @@ https://github.com/willgresham34/Gamaro
 
 ## URL link to deploy in Heroku
 
+https://gamaro.herokuapp.com/
+
 ## Mock-Up Image
 
 ## Technologies
@@ -100,4 +102,4 @@ This project is licensed under the MIT license.
 
 ## Presentation
 
-[Project Presentation]()
+[Project Presentation](https://docs.google.com/presentation/d/1D5xZovNQ-x2wkVnMCdicawxvX4OPTiVXdRfiWlI-0_0/edit?usp=sharing)
