@@ -55,7 +55,7 @@ https://gamaro.herokuapp.com/
 
 ## Mock-Up Image
 
-[gamaro](https://user-images.githubusercontent.com/88916382/147712879-e378cf7e-1025-467b-8814-b39f12fbf737.png)
+![gamaro](https://user-images.githubusercontent.com/88916382/147712879-e378cf7e-1025-467b-8814-b39f12fbf737.png)
 
 ## Technologies
 
