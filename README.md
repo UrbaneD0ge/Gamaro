@@ -30,7 +30,8 @@ SO THAT I can easily find what I want
 
 ```
 GIVEN a gamaro platform
-WHEN I visit the site for the first time
+WHEN I visit the site for the first time!
+
 THEN I am presented with the option to sign up or login and all the products available for sale
 WHEN I sign up
 THEN I am taken to homepage which has all the products available for sale
@@ -53,6 +54,8 @@ https://github.com/willgresham34/Gamaro
 https://gamaro.herokuapp.com/
 
 ## Mock-Up Image
+
+[gamaro](https://user-images.githubusercontent.com/88916382/147712879-e378cf7e-1025-467b-8814-b39f12fbf737.png)
 
 ## Technologies
 
